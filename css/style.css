@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root {
+    --light-red: #d70101;
+    --dark-red: #8c0000;
+    --color-white: #ffffff;
+    --color-black: #000000;
+}
+h1, h2, h3, h4, h5, h6, p, a, li, i {
+    font-family: "Inter Tight", sans-serif;
+    transition: 0.4s all;
+}
+a {
+    color: var(--light-red);
+    cursor: pointer;
+    text-decoration: none;
+    transition: 0.4s all;
+}
+img {
+    width: 100%;
+}
+ul li {
+    font-size: 18px;
+}
+.container {
+    width: 100%;
+    max-width: 1280px;
+}
+.row {
+    width: 100%;
+}
+.r-klan-header {
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+    position: relative;
+}
+.r-klan-header .row {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+}
+.r-klan-header .row .logo-col {
+    width: 20%;
+}
+.r-klan-header .row .desktop-nav {
+    width: 80%;
+}
+.r-klan-header .nav-col {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    column-gap: 40px;
+}
+.r-klan-header .header-nav ul {
+    list-style: none;
+    display: flex;
+    column-gap: 30px;
+}
+.r-klan-header .header-nav ul li {
+    font-weight: 500;
+}
+.r-klan-header .header-nav ul li a {
+    color: var(--color-black);
+    text-decoration: none;
+    &:hover {
+        color: var(--light-red);
+    }
+}
+.r-klan-header .header-sm-icons {
+    display: flex;
+    column-gap: 10px;
+}
+.r-klan-header .header-sm-icons i {
+    color: var(--light-red);
+    border: 1px solid var(--light-red);
+    border-radius: 50%;
+    aspect-ratio: 1 / 1;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:hover {
+        background-color: var(--light-red);
+        color: var(--color-white);
+    }
+}
+.mobile-nav, 
+.nav-toggle {
+    display: none; 
+}
