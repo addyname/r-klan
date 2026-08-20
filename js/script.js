@@ -1,4 +1,4 @@
-
+// Mobile Toggle
     const navToggle = document.getElementById('navToggle');
     const mobileNav = document.getElementById('mobileNav');
     
@@ -20,3 +20,4 @@
             toggleIcon.classList.add('fa-bars');
         }
     });
+// Mobile Toggle
