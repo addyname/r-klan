@@ -15,9 +15,15 @@
 h1, h2, h3, h4, h5, h6, p, a, li, i {
     font-family: "Inter Tight", sans-serif;
     transition: 0.4s all;
+    font-weight: 400;
+}
+h1 {
+    font-size: 60px;
+    line-height: 1.2em;
 }
 p {
     font-size: 18px;
+    line-height: 1.4em;
 }
 a {
     color: var(--light-red);
@@ -31,12 +37,17 @@ img {
 ul li {
     font-size: 18px;
 }
+figure {
+    line-height: 0;
+}
 .container {
     width: 100%;
     max-width: 1280px;
 }
 .row {
     width: 100%;
+    display: grid;
+    row-gap: 20px;
 }
 /* Header */
 .r-klan-header {
@@ -67,12 +78,10 @@ ul li {
     display: flex;
     column-gap: 30px;
 }
-.r-klan-header .header-nav ul li {
-    font-weight: 500;
-}
 .r-klan-header .header-nav ul li a {
     color: var(--color-black);
     text-decoration: none;
+    font-weight: 500;
     &:hover {
         color: var(--light-red);
     }
@@ -102,6 +111,7 @@ ul li {
 }
 /* Header */
 
+/* Your Family */
 .your-family {
     display: flex;
     justify-content: center;
@@ -110,4 +120,104 @@ ul li {
 }
 .your-family h1, .your-family p{
     color: var(--color-white);
+    text-align: center;
+} 
+.your-family p {
+    font-size: 26px;
+}
+.your-family .container {
+    display: grid;
+    row-gap: 40px;
+}
+.your-family .container .row:first-child {
+    max-width: 1024px;
+}
+.your-family .row {
+    justify-self: center;
+}
+.your-family .hero-slides {
+    border-radius: 30px;
+    border: 15px solid rgba(255, 255, 255, 0.2);
+    cursor: grab; 
+    cursor: -webkit-grab;
+}
+.your-family .hero-slides img {
+    border-radius: 15px;
+}
+/* Your Family */
+
+.your-family .slider-row {
+    margin-bottom: -100px;
+}
+
+/* Ensure sliding images stay inside your custom border */
+.your-family .hero-slides {
+    position: relative;
+    overflow: hidden; 
+}
+
+/* Hide all slides by default */
+.your-family .hero-slides img.slide {
+    display: none;
+    width: 100%; 
+}
+
+/* Slide in from the RIGHT (Next) */
+.your-family .hero-slides img.active-slide-next {
+    display: block;
+    animation: slideInRight 0.5s ease-out forwards; 
+}
+
+/* Slide in from the LEFT (Previous) */
+.your-family .hero-slides img.active-slide-prev {
+    display: block;
+    animation: slideInLeft 0.5s ease-out forwards; 
+}
+
+.your-family .hero-slides.active-drag {
+    cursor: grabbing !important;
+    cursor: -webkit-grabbing !important;
+}
+
+/* Styling the Pagination Dots */
+.slider-dots {
+    text-align: center;
+}
+
+.slider-dots .dot {
+    cursor: pointer;
+    height: 14px;
+    width: 14px;
+    margin: 0 6px;
+    background-color: #b0b0b0; 
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+/* Dark red for active/hovered dots */
+.slider-dots .dot.active-dot, .slider-dots .dot:hover {
+    background-color: var(--dark-red); 
+}
+
+/* =========================================
+   ANIMATION: DIRECTIONAL SLIDE
+   ========================================= */
+
+@keyframes slideInRight {
+    0% { 
+        transform: translateX(100%); 
+    } 
+    100% { 
+        transform: translateX(0); 
+    }
+}
+
+@keyframes slideInLeft {
+    0% { 
+        transform: translateX(-100%); 
+    } 
+    100% { 
+        transform: translateX(0); 
+    }
 }
