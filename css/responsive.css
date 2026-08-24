@@ -133,24 +133,11 @@
 
   /* ------------------------------------------------- About ------------------------------------------------- */
   .about-plight {
-    padding: 150px 0px 0px;
+    padding: 150px 0px 60px;
   }
-
-  .about-plight .row {
-    display: inline-block;
-  }
-
-  .about-plight .col-img,
   .about-plight .contents {
-    width: 100%;
+    padding: 60px 40px;
   }
-
-  .about-plight .contents {
-    padding: 60px 15px;
-    display: grid;
-    row-gap: 20px;
-  }
-
   /* ------------------------------------------------- About ------------------------------------------------- */
 }
 
@@ -164,8 +151,20 @@
   }
 
   /* ------------------------------------------------- About ------------------------------------------------- */
+  
+  .about-plight .row {
+    display: inline-block;
+    padding-right: 15px;
+  }
+  .about-plight .col-img,
+  .about-plight .contents {
+    width: 100%;
+  }
   .about-plight .col-img {
     min-height: 500px;
+  }
+  .about-plight .contents {
+    padding: 60px 0px 0px 15px;
   }
 
   /* ------------------------------------------------- About ------------------------------------------------- */
