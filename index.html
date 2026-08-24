@@ -14,7 +14,7 @@
 
 <body>
 
-  <!-- Header -->
+  <!------------------------------------------------- Header ------------------------------------------------->
   <header id="rklanHeader" class="r-klan-header">
     <div class="container">
       <div class="row">
@@ -43,12 +43,12 @@
             </div>
           </div>
         </div>
-
+        <!-- Toggle Button -->
         <button class="nav-toggle" id="navToggle">
           <i class="fa-solid fa-bars"></i>
         </button>
-
-
+        <!-- Toggle Button -->
+        <!-- Mobile Menu -->
         <div class="mobile-nav" id="mobileNav">
           <div class="nav-col">
             <nav class="header-nav">
@@ -68,42 +68,64 @@
             </div>
           </div>
         </div>
+        <!-- Mobile Menu -->
       </div>
     </div>
   </header>
-  <!-- Header -->
+  <!------------------------------------------------- Header ------------------------------------------------->
 
-<!-- Your Family -->
- <section id="yourFamily" class="your-family">
-  <div class="container">
-    <div class="row">
-      <h1><b>Your Family Has</b> <em>No Rights</em></h1>
-      <p>How nine racist words destroyed a family’s peace and sparked a relentless fight against corruption and government retaliation at Ramona Airport.</p>
+  <!------------------------------------------------- Your Family ------------------------------------------------->
+  <section id="yourFamily" class="your-family">
+    <div class="container">
+      <div class="row">
+        <h1><b>Your Family Has</b> <em>No Rights</em></h1>
+        <p>How nine racist words destroyed a family’s peace and sparked a relentless fight against corruption and
+          government retaliation at Ramona Airport.</p>
+      </div>
+      <div class="row slider-row">
+        <figure class="hero-slides">
+          <img class="slide active-slide" src="images/hero-slide1.jpg" alt="Hero Banner image 1">
+          <img class="slide" src="images/hero-slide2.jpg" alt="Hero Banner image 2">
+          <img class="slide" src="images/hero-slide3.jpg" alt="Hero Banner image 3">
+          <img class="slide" src="images/hero-slide4.jpg" alt="Hero Banner image 4">
+        </figure>
+
+        <!-- Red and Gray Pagination Dots -->
+        <div class="slider-dots">
+          <span class="dot active-dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+          <span class="dot" onclick="currentSlide(4)"></span>
+        </div>
+        <!-- Red and Gray Pagination Dots -->
+      </div>
     </div>
-    <div class="row slider-row">
-      <figure class="hero-slides">
-        <img class="slide active-slide" src="images/hero-slide1.jpg" alt="Hero Banner image 1">
-        <img class="slide" src="images/hero-slide2.jpg" alt="Hero Banner image 2">
-        <img class="slide" src="images/hero-slide3.jpg" alt="Hero Banner image 3">
-        <img class="slide" src="images/hero-slide4.jpg" alt="Hero Banner image 4">
-      </figure>
+  </section>
+  <!------------------------------------------------- Your Family ------------------------------------------------->
 
-      <!-- Red and Gray Pagination Dots -->
-      <div class="slider-dots">
-        <span class="dot active-dot" onclick="currentSlide(1)"></span>
-        <span class="dot" onclick="currentSlide(2)"></span>
-        <span class="dot" onclick="currentSlide(3)"></span>
-        <span class="dot" onclick="currentSlide(4)"></span>
+  <!------------------------------------------------- About ------------------------------------------------->
+   <section id="about" class="about-plight">
+    
+      <div class="row">
+        <div class="col-img">
+
+        </div>
+        <div class="contents">
+          <h2>About <b>Our Plight</b></h2>
+          <p>On July 8, 2015, our minority family's lives were drastically and permanently changed by nine racist words. "Your family has no rights; planes have no rules." They were spoken proudly by the airport manager, Meadow Chase, who was responsible for the management of Ramona Airport.</p>
+          <p>Meadow Chase was already fully aware of the impact her words would have and had the backing of local public servants and co-conspirators. Unwittingly, we found ourselves in a vicious, hopeless, helpless landscape of fear and violence, unable to use our property for its intended purpose or live in peace, as we had done for the past fifteen years.</p>
+          <div class="r-klan-btn">
+            <a href="#">Read More</a>
+          </div>
+        </div>
       </div>
 
-    </div>
-  </div>
- </section>
-<!-- Your Family -->
+   </section>
+  <!------------------------------------------------- About ------------------------------------------------->
 
-  <!-- Scripts -->
+  <!------------------------------------------------- Scripts ------------------------------------------------->
   <script src="js/script.js"></script>
-  <!-- Scripts -->
+  <!------------------------------------------------- Scripts ------------------------------------------------->
 </body>
 
 </html>

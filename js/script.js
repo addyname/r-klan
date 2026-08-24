@@ -1,4 +1,4 @@
-// Mobile Toggle
+// ------------------------------------------------- Mobile Toggle -------------------------------------------------
     const navToggle = document.getElementById('navToggle');
     const mobileNav = document.getElementById('mobileNav');
     
@@ -20,8 +20,9 @@
             toggleIcon.classList.add('fa-bars');
         }
     });
-// Mobile Toggle
+// ------------------------------------------------- Mobile Toggle -------------------------------------------------
 
+// ------------------------------------------------- Hero Slider -------------------------------------------------
 let slideIndex = 1;
 let previousIndex = 1; // Tracks the last slide to determine direction
 let slideInterval;     // Variable to hold the autoplay timer
@@ -96,9 +97,7 @@ function showSlides(n) {
   previousIndex = slideIndex;
 }
 
-/* =========================================
-   DRAG AND SWIPE FUNCTIONALITY
-   ========================================= */
+/* DRAG AND SWIPE FUNCTIONALITY */
 
 const sliderContainer = document.querySelector(".hero-slides");
 let startPos = 0;
@@ -143,3 +142,5 @@ sliderContainer.addEventListener('mouseleave', dragEnd);
 // Touch Events
 sliderContainer.addEventListener('touchstart', dragStart, { passive: true });
 sliderContainer.addEventListener('touchend', dragEnd);
+
+// ------------------------------------------------- Hero Slider -------------------------------------------------
