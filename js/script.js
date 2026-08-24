@@ -24,15 +24,34 @@
 
 let slideIndex = 1;
 let previousIndex = 1; // Tracks the last slide to determine direction
+let slideInterval;     // Variable to hold the autoplay timer
+const autoPlayTime = 4000; // Time between slides in milliseconds (4000 = 4 seconds)
 
 showSlides(slideIndex);
+startAutoplay(); // Start the autoplay when the page loads
+
+// Start the autoplay timer
+function startAutoplay() {
+  slideInterval = setInterval(() => {
+    changeSlide(1);
+  }, autoPlayTime);
+}
+
+// Reset the autoplay timer when the user interacts
+function resetAutoplay() {
+  clearInterval(slideInterval);
+  startAutoplay();
+}
 
 function currentSlide(n) {
   showSlides(slideIndex = n);
+  resetAutoplay(); // Reset timer on dot click
 }
 
 function changeSlide(n) {
   showSlides(slideIndex += n);
+  // Note: resetAutoplay() is not called here directly because it's called 
+  // via dragEnd or currentSlide to avoid duplicate resets.
 }
 
 function showSlides(n) {
@@ -87,6 +106,7 @@ let isDragging = false;
 
 function dragStart(e) {
   isDragging = true;
+  clearInterval(slideInterval); // Pause autoplay while the user is dragging
   sliderContainer.classList.add('active-drag');
   startPos = e.type.includes('mouse') ? e.pageX : e.touches[0].clientX;
 }
@@ -103,8 +123,13 @@ function dragEnd(e) {
 
   if (moveDistance < -threshold) {
     changeSlide(1); // Next
+    resetAutoplay(); 
   } else if (moveDistance > threshold) {
     changeSlide(-1); // Previous
+    resetAutoplay(); 
+  } else {
+    // If they clicked but didn't drag far enough, just resume the timer
+    startAutoplay(); 
   }
 }
 
