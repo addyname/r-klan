@@ -8,79 +8,24 @@
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/responsive.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
-  <!-- <script src="js/script.js" defer></script> -->
+  
+  <script src="js/components.js" defer></script>
+  <script src="js/script.js" defer></script>
   <!-- If you prefer to keep your script links in the <head>, add the word defer. This tells the browser to wait until the HTML is fully loaded before running the script. -->
 </head>
 
 <body>
 
   <!------------------------------------------------- Header ------------------------------------------------->
-  <header id="rklanHeader" class="r-klan-header">
-    <div class="container">
-      <div class="row">
-        <div class="logo-col">
-          <figure class="r-klan-logo">
-            <a href="index.html"><img src="images/r-klan-logo.png" alt="R-Klan Logo" /></a>
-          </figure>
-        </div>
-
-        <div class="desktop-nav">
-          <div class="nav-col">
-            <nav class="header-nav">
-              <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#">About Our Cause</a></li>
-                <li><a href="#">Buy Book</a></li>
-                <li><a href="#">Shop</a></li>
-                <li><a href="#">Reviews</a></li>
-                <li><a href="#">Contact Us</a></li>
-              </ul>
-            </nav>
-            <div class="header-sm-icons">
-              <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-              <a href="#"><i class="fa-brands fa-instagram"></i></a>
-              <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-            </div>
-          </div>
-        </div>
-        <!-- Toggle Button -->
-        <button class="nav-toggle" id="navToggle">
-          <i class="fa-solid fa-bars"></i>
-        </button>
-        <!-- Toggle Button -->
-        <!-- Mobile Menu -->
-        <div class="mobile-nav" id="mobileNav">
-          <div class="nav-col">
-            <nav class="header-nav">
-              <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#">About Our Cause</a></li>
-                <li><a href="#">Buy Book</a></li>
-                <li><a href="#">Shop</a></li>
-                <li><a href="#">Reviews</a></li>
-                <li><a href="#">Contact Us</a></li>
-              </ul>
-            </nav>
-            <div class="header-sm-icons">
-              <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-              <a href="#"><i class="fa-brands fa-instagram"></i></a>
-              <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-            </div>
-          </div>
-        </div>
-        <!-- Mobile Menu -->
-      </div>
-    </div>
-  </header>
+  <site-header></site-header>
   <!------------------------------------------------- Header ------------------------------------------------->
 
   <!------------------------------------------------- Your Family ------------------------------------------------->
-  <section id="yourFamily" class="your-family">
+  <section id="yourFamily" class="your-family"> 
     <div class="container">
       <div class="row">
         <h1><b>Your Family Has</b> <em>No Rights</em></h1>
-        <p>How nine racist words destroyed a family’s peace and sparked a relentless fight against corruption and
-          government retaliation at Ramona Airport.</p>
+        <p>How nine racist words destroyed a family’s peace and sparked a relentless fight against corruption and government retaliation at Ramona Airport.</p>
       </div>
       <div class="row slider-row">
         <figure class="hero-slides">
@@ -97,35 +42,31 @@
           <span class="dot" onclick="currentSlide(3)"></span>
           <span class="dot" onclick="currentSlide(4)"></span>
         </div>
-        <!-- Red and Gray Pagination Dots -->
       </div>
     </div>
   </section>
   <!------------------------------------------------- Your Family ------------------------------------------------->
 
   <!------------------------------------------------- About ------------------------------------------------->
-   <section id="about" class="about-plight">
-    
-      <div class="row">
-        <div class="col-img">
-
-        </div>
-        <div class="contents">
-          <h2>About <b>Our Plight</b></h2>
-          <p>On July 8, 2015, our minority family's lives were drastically and permanently changed by nine racist words. "Your family has no rights; planes have no rules." They were spoken proudly by the airport manager, Meadow Chase, who was responsible for the management of Ramona Airport.</p>
-          <p>Meadow Chase was already fully aware of the impact her words would have and had the backing of local public servants and co-conspirators. Unwittingly, we found ourselves in a vicious, hopeless, helpless landscape of fear and violence, unable to use our property for its intended purpose or live in peace, as we had done for the past fifteen years.</p>
-          <div class="r-klan-btn">
-            <a href="#">Read More</a>
-          </div>
+  <section id="about" class="about-plight">
+    <div class="row">
+      <div class="col-img">
+      </div>
+      <div class="contents">
+        <h2>About <b>Our Plight</b></h2>
+        <p>On July 8, 2015, our minority family's lives were drastically and permanently changed by nine racist words. "Your family has no rights; planes have no rules." They were spoken proudly by the airport manager, Meadow Chase, who was responsible for the management of Ramona Airport.</p>
+        <p>Meadow Chase was already fully aware of the impact her words would have and had the backing of local public servants and co-conspirators. Unwittingly, we found ourselves in a vicious, hopeless, helpless landscape of fear and violence, unable to use our property for its intended purpose or live in peace, as we had done for the past fifteen years.</p>
+        <div class="r-klan-btn">
+          <a href="#">Read More</a>
         </div>
       </div>
-
-   </section>
+    </div>
+  </section>
   <!------------------------------------------------- About ------------------------------------------------->
 
-  <!------------------------------------------------- Scripts ------------------------------------------------->
-  <script src="js/script.js"></script>
-  <!------------------------------------------------- Scripts ------------------------------------------------->
+  <!------------------------------------------------- Footer ------------------------------------------------->
+  <!------------------------------------------------- Footer ------------------------------------------------->
+  
 </body>
 
 </html>
