@@ -3,13 +3,29 @@ const navToggle = document.getElementById("navToggle");
 const mobileNav = document.getElementById("mobileNav");
 const toggleIcon = navToggle.querySelector("i");
 
-navToggle.addEventListener("click", () => {
-  mobileNav.classList.toggle("active");
-
-  // Toggle both icon classes simultaneously
-  toggleIcon.classList.toggle("fa-bars");
-  toggleIcon.classList.toggle("fa-xmark");
+navToggle.addEventListener('click', () => {
+    const isOpen = mobileNav.classList.toggle('active');
+    
+    if (isOpen) {
+        toggleIcon.classList.replace('fa-bars', 'fa-xmark');
+    } else {
+        toggleIcon.classList.replace('fa-xmark', 'fa-bars');
+    }
 });
+
+// Method 2
+// const navToggle = document.getElementById("navToggle");
+// const mobileNav = document.getElementById("mobileNav");
+// const toggleIcon = navToggle.querySelector("i");
+
+// navToggle.addEventListener("click", () => {
+//   mobileNav.classList.toggle("active");
+
+//   // Toggle both icon classes simultaneously
+//   toggleIcon.classList.toggle("fa-bars");
+//   toggleIcon.classList.toggle("fa-xmark");
+// });
+
 // ------------------------------------------------- Mobile Toggle -------------------------------------------------
 
 // ------------------------------------------------- Hero Slider -------------------------------------------------
