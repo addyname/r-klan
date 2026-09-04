@@ -281,25 +281,53 @@ figure {
     display: flex;
     justify-content: center;
     background-color: var(--dark-blue);
-    padding: 80px 15px 30px;
+    padding: 100px 15px 35px;
+}
+.r-klan-footer .footer-logo img{
+    max-width: 300px;
 }
 .r-klan-footer a {
     color: var(--color-white);
+    
 }
 .r-klan-footer .row:first-child {
     display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--color-white);
+    padding-bottom: 35px;
+    margin-bottom: 35px;
+}
+.r-klan-footer .row:first-child .col:first-child{
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    align-items: center;
+}
+.r-klan-footer .row:first-child .col:last-child {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    justify-content: space-between;
+}
+.r-klan-footer .footer-nav ul {
+    row-gap: 15px;
+  display: flex;
+  flex-direction: column;
+}
+.r-klan-footer .footer-nav ul li{
+    list-style: none;
 }
 .r-klan-footer .footer-copyright {
     text-align: center;
     color: var(--color-white);
 }
-.r-klan-header .header-sm-icons {
+.r-klan-footer .footer-sm-icons {
     display: flex;
     column-gap: 10px;
 }
-.r-klan-header .header-sm-icons i {
-    color: var(--light-red);
-    border: 1px solid var(--light-red);
+.r-klan-footer .footer-sm-icons i {
+    color: var(--color-white);
+    border: 1px solid var(--color-white);
     border-radius: 50%;
     aspect-ratio: 1 / 1;
     height: 40px;
