@@ -64,11 +64,44 @@ class SiteFooter extends HTMLElement {
   connectedCallback() {
     // Replace this with your actual footer HTML
     this.innerHTML = `
-      <footer class="r-klan-footer" style="padding: 20px 0; text-align: center; background: #f4f4f4;">
-        <div class="container">
-          <p>&copy; 2026 R-Klan. All rights reserved.</p>
+      <footer id="rKlanFooter" class="r-klan-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <figure class="footer-logo">
+              <a href="index.html"
+                ><img src="images/r-klan-footer-logo.png" alt="R-Klan Logo"
+              /></a>
+            </figure>
+            <div class="footer-sm-icons">
+              <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+          </div>
+          <div class="col">
+            <nav class="footer-nav">
+              <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Our Cause</a></li>
+                <li><a href="#">Buy Book</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">Reviews</a></li>
+                <li><a href="#">Contact Us</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="col">
+            <p><a href="#">Address will come here,</a></p>
+            <p><a href="tel:123-456-7890" target="_blank">(123) 456-7890</a></p>
+            <p><a href="mailto:info@r-klan.com" target="_blank">info@r-klan.com</a></p>
+          </div>
         </div>
-      </footer>
+        <div class="row">
+          <p class="footer-copyright">© 2026 R-Klan. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
     `;
   }
 }
