@@ -275,3 +275,41 @@ figure {
     justify-content: center;
 }
 /* ------------------------------------------------- About ------------------------------------------------- */
+
+/* ------------------------------------------------- Footer ------------------------------------------------- */
+.r-klan-footer {
+    display: flex;
+    justify-content: center;
+    background-color: var(--dark-blue);
+    padding: 80px 15px 30px;
+}
+.r-klan-footer a {
+    color: var(--color-white);
+}
+.r-klan-footer .row:first-child {
+    display: flex;
+}
+.r-klan-footer .footer-copyright {
+    text-align: center;
+    color: var(--color-white);
+}
+.r-klan-header .header-sm-icons {
+    display: flex;
+    column-gap: 10px;
+}
+.r-klan-header .header-sm-icons i {
+    color: var(--light-red);
+    border: 1px solid var(--light-red);
+    border-radius: 50%;
+    aspect-ratio: 1 / 1;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:hover {
+        background-color: var(--light-red);
+        color: var(--color-white);
+    }
+}
+/* ------------------------------------------------- Footer ------------------------------------------------- */
