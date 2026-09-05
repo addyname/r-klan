@@ -27,7 +27,7 @@ h2 {
 }
 p {
     font-size: 18px;
-    line-height: 1.4em;
+    line-height: 1.6em;
 }
 a {
     color: var(--light-red);
@@ -132,43 +132,47 @@ figure {
 }
 /* ------------------------------------------------- Header ------------------------------------------------- */
 
-/* ------------------------------------------------- Your Family ------------------------------------------------- */
-.your-family {
+/* ------------------------------------------------- Hero ------------------------------------------------- */
+.your-family, .inner-page-banner {
     display: flex;
     justify-content: center;
     background-color: var(--dark-blue);
     padding: 60px 15px 0px;
 }
-.your-family h1, .your-family p{
+.your-family h1, .your-family p, .inner-page-banner h1{
     color: var(--color-white);
     text-align: center;
 } 
 .your-family p {
     font-size: 26px;
 }
-.your-family .container {
+.your-family .container, .inner-page-banner .container {
     display: grid;
     row-gap: 40px;
 }
-.your-family .container .row:first-child {
-    max-width: 1024px;
-    display: grid;
-    row-gap: 20px;
-}
-.your-family .row {
+.your-family .row, .inner-page-banner .row {
     justify-self: center;
 }
-.your-family .hero-slides {
+.your-family .row:first-child, .inner-page-banner .row:first-child{
+    max-width: 1024px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+.your-family .hero-slides, .inner-page-banner .banner-img{
     border-radius: 30px;
     border: 15px solid rgba(255, 255, 255, 0.2);
     cursor: grab; 
     cursor: -webkit-grab;
 }
-.your-family .hero-slides img {
+.inner-page-banner .banner-img {
+    cursor: default;
+}
+.your-family .hero-slides img, .inner-page-banner .banner-img img {
     border-radius: 15px;
 }
 
-.your-family .slider-row {
+.your-family .slider-row, .inner-page-banner .row:last-child {
     margin-bottom: -100px;
 }
 
@@ -242,7 +246,7 @@ figure {
         transform: translateX(0); 
     }
 }
-/* ------------------------------------------------- Your Family ------------------------------------------------- */
+/* ------------------------------------------------- Hero ------------------------------------------------- */
 
 /* ------------------------------------------------- About ------------------------------------------------- */
 .about-plight {
@@ -276,6 +280,33 @@ figure {
 }
 /* ------------------------------------------------- About ------------------------------------------------- */
 
+/* ------------------------------------------------- About Intro ------------------------------------------------- */
+.about-intro {
+    display: flex;
+    justify-content: center;
+    padding: 200px 15px 100px;
+    background-image: url('../images/home-about-bg.jpg');
+    background-size: cover;
+    background-position: center right;
+}
+.about-intro .row {
+    display: flex;
+    align-items: center;
+    column-gap: 50px;
+}
+.about-intro .row .col {
+    width: 50%;
+}
+.about-intro .img img {
+    border-radius: 20px;
+}
+.about-intro .content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+}
+/* ------------------------------------------------- About Intro ------------------------------------------------- */
+
 /* ------------------------------------------------- Footer ------------------------------------------------- */
 .r-klan-footer {
     display: flex;
@@ -288,7 +319,9 @@ figure {
 }
 .r-klan-footer a {
     color: var(--color-white);
-    
+    &:hover {
+        color: var(--light-red);
+    }
 }
 .r-klan-footer .row:first-child {
     display: flex;
@@ -339,5 +372,26 @@ figure {
         background-color: var(--light-red);
         color: var(--color-white);
     }
+}
+.footer-address, .footer-ph-no, .footer-email {
+    display: flex;
+    column-gap: 10px;
+}
+.footer-ph-no {
+    font-size: 20px;
+    font-weight: 700;
+}
+.footer-address:before, .footer-ph-no:before, .footer-email:before {
+    font-family: "Font Awesome 6 Free";
+    font-weight: 700;
+}
+.footer-address:before {
+    content: "\f3c5";
+}
+.footer-ph-no:before {
+    content: "\f2a0";
+}
+.footer-email:before {
+    content: "\f0e0";
 }
 /* ------------------------------------------------- Footer ------------------------------------------------- */

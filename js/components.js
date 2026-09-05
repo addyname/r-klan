@@ -23,9 +23,9 @@ class SiteHeader extends HTMLElement {
                   </ul>
                 </nav>
                 <div class="header-sm-icons">
-                  <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                  <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                  <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                  <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                  <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                  <a href="https://www.linkedin.com/" target="_blank"#"><i class="fa-brands fa-linkedin-in"></i></a>
                 </div>
               </div>
             </div>
@@ -47,9 +47,9 @@ class SiteHeader extends HTMLElement {
                   </ul>
                 </nav>
                 <div class="header-sm-icons">
-                  <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                  <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                  <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                  <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                  <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                  <a href="https://www.linkedin.com/" target="_blank"#"><i class="fa-brands fa-linkedin-in"></i></a>
                 </div>
               </div>
             </div>
@@ -74,9 +74,9 @@ class SiteFooter extends HTMLElement {
               /></a>
             </figure>
             <div class="footer-sm-icons">
-              <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-              <a href="#"><i class="fa-brands fa-instagram"></i></a>
-              <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+              <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+              <a href="https://www.linkedin.com/" target="_blank"#"><i class="fa-brands fa-linkedin-in"></i></a>
             </div>
           </div>
           <div class="col">
@@ -92,9 +92,9 @@ class SiteFooter extends HTMLElement {
             </nav>
           </div>
           <div class="col">
-            <p><a href="#">Address will come here,</a></p>
-            <p><a href="tel:123-456-7890" target="_blank">(123) 456-7890</a></p>
-            <p><a href="mailto:info@r-klan.com" target="_blank">info@r-klan.com</a></p>
+            <p><a class="footer-address" href="https://www.google.com/maps" target="_blank">Address will come here,<br>Address will come here,</a></p>
+            <p><a class="footer-ph-no" href="tel:123-456-7890" target="_blank">(123) 456-7890</a></p>
+            <p><a class="footer-email" href="mailto:info@r-klan.com" target="_blank">info@r-klan.com</a></p>
           </div>
         </div>
         <div class="row">
