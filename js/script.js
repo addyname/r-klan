@@ -1,3 +1,4 @@
+
 // ------------------------------------------------- Mobile Toggle -------------------------------------------------
 const navToggle = document.getElementById("navToggle");
 const mobileNav = document.getElementById("mobileNav");
@@ -27,6 +28,14 @@ navToggle.addEventListener('click', () => {
 // });
 
 // ------------------------------------------------- Mobile Toggle -------------------------------------------------
+
+// ------------------------------------------------- Active Link -------------------------------------------------
+const activeLink = document.querySelectorAll('.r-klan-header .header-nav ul li a')
+
+  activeLink.forEach(link => {
+    if (link.href === window.location.href) link.classList.add('active');
+  });
+// ------------------------------------------------- Active Link -------------------------------------------------
 
 // ------------------------------------------------- Hero Slider -------------------------------------------------
 let slideIndex = 1;

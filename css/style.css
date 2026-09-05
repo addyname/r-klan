@@ -107,6 +107,9 @@ figure {
         color: var(--light-red);
     }
 }
+.r-klan-header .header-nav ul li a.active {
+    color: var(--light-red);
+}
 .r-klan-header .header-sm-icons {
     display: flex;
     column-gap: 10px;
