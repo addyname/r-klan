@@ -34,7 +34,7 @@ const activeLink = document.querySelectorAll('.r-klan-header .header-nav ul li a
 
   activeLink.forEach(link => {
     if (link.href === window.location.href) link.classList.add('active');
-  });
+}); 
 // ------------------------------------------------- Active Link -------------------------------------------------
 
 // ------------------------------------------------- Hero Slider -------------------------------------------------
