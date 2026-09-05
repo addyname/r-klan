@@ -168,6 +168,12 @@ figure {
 .inner-page-banner .banner-img {
     cursor: default;
 }
+.your-family .hero-slides img, .inner-page-banner .banner-img img{
+    height: auto;
+    min-height: 600px;
+    object-fit: cover;
+    object-position: center;
+}
 .your-family .hero-slides img, .inner-page-banner .banner-img img {
     border-radius: 15px;
 }
