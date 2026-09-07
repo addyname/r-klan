@@ -1,3 +1,23 @@
+// ------------------------------------------------- Header Sticky -------------------------------------------------
+document.addEventListener("DOMContentLoaded", function() {
+  const header = document.getElementById("rklanHeader");
+
+  window.addEventListener("scroll", function() {
+    // Dynamically get the header's height
+    const headerHeight = header.offsetHeight;
+    
+    if (window.scrollY > 200) {
+      header.classList.add("is-sticky");
+      // Add padding to the body to replace the missing header space
+      document.body.style.paddingTop = headerHeight + 'px';
+    } else {
+      header.classList.remove("is-sticky");
+      // Remove the padding when returning to the top
+      document.body.style.paddingTop = '0';
+    }
+  });
+});
+// ------------------------------------------------- Header Sticky -------------------------------------------------
 
 // ------------------------------------------------- Mobile Toggle -------------------------------------------------
 const navToggle = document.getElementById("navToggle");

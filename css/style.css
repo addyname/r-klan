@@ -359,7 +359,32 @@ figure {
     max-width: 110px;
 }
 /* ------------------------------------------------- Reviews ------------------------------------------------- */
+/* Base styles for your header */
+.r-klan-header {
+  width: 100%;
+  z-index: 999; /* Ensures it stays above other content */
+  transition: all 0.3s ease-in-out; 
+}
 
+/* The class added by JavaScript after 200px */
+.r-klan-header.is-sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #ffffff; /* Change this to match your site's design */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adds a nice drop shadow */
+  animation: slideDown 0.4s ease-in-out forwards;
+}
+
+/* Keyframes for the smooth slide-down effect */
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
 /* ------------------------------------------------- Footer ------------------------------------------------- */
 .r-klan-footer {
     display: flex;
