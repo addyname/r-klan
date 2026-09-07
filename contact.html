@@ -1,45 +1,65 @@
 <!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>R-Klan</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>R-Klan</title>
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/responsive.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+    <script src="js/components.js" defer></script>
+    <script src="js/script.js" defer></script>
+    <!-- If you prefer to keep your script links in the <head>, add the word defer. This tells the browser to wait until the HTML is fully loaded before running the script. -->
+  </head>
 
-  <script src="js/components.js" defer></script>
-  <script src="js/script.js" defer></script>
-  <!-- If you prefer to keep your script links in the <head>, add the word defer. This tells the browser to wait until the HTML is fully loaded before running the script. -->
-</head>
+  <body>
+    <!------------------------------------------------- Header ------------------------------------------------->
+    <site-header></site-header>
+    <!------------------------------------------------- Header ------------------------------------------------->
 
-<body>
-
-  <!------------------------------------------------- Header ------------------------------------------------->
-  <site-header></site-header>
-  <!------------------------------------------------- Header ------------------------------------------------->
-
-  <!------------------------------------------------- Banner ------------------------------------------------->
-  <section id="innerPageBanner" class="inner-page-banner">
-    <div class="container">
-      <div class="row">
-        <h1><b>Contact Us</b></h1>
+    <!------------------------------------------------- Banner ------------------------------------------------->
+    <section id="innerPageBanner" class="inner-page-banner">
+      <div class="container">
+        <div class="row">
+          <h1><b>Contact Us</b></h1>
+        </div>
+        <div class="row">
+          <figure class="banner-img">
+            <img src="images/contact-banner-bg.jpg" alt="Contact Banner" />
+          </figure>
+        </div>
       </div>
-      <div class="row">
-        <figure class="banner-img">
-          <img src="images/contact-banner-bg.jpg" alt="Contact Banner">
-        </figure>
+    </section>
+    <!------------------------------------------------- Banner ------------------------------------------------->
+
+    <!------------------------------------------------- Get In Touch ------------------------------------------------->
+    <section id="getInTouch" class="get-in-touch">
+      <div class="container">
+        <div class="row">
+          <div class="col img">
+            <img src="images/airplane-img.jpg" alt="flight" />
+          </div>
+          <div class="col content">
+            <h2><b>Get In Touch</b></h2>
+            <form class="contact-form" action="#" method="get">
+              <input type="text" name="name" id="fullName" placeholder="Name">
+              <input type="email" name="email" id="emailAddress" placeholder="Email">
+              <input type="tel" name="phone" id="phoneNumber" placeholder="Phone">
+              <textarea name="message" id="formMessage" placeholder="Message"></textarea>
+              <input type="submit" value="SUBMIT">
+            </form>
+          </div>
+        </div>
       </div>
-    </div>
-  </section>
-  <!------------------------------------------------- Banner ------------------------------------------------->
+    </section>
+    <!------------------------------------------------- Get In Touch ------------------------------------------------->
 
- 
-
-  <!------------------------------------------------- Footer ------------------------------------------------->
+    <!------------------------------------------------- Footer ------------------------------------------------->
     <site-footer></site-footer>
     <!------------------------------------------------- Footer ------------------------------------------------->
-</body>
-
+  </body>
 </html>

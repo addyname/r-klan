@@ -12,9 +12,14 @@
     --color-black: #000000;
     --dark-blue: #142749;
     --light-grey: #b0b0b0;
+    --half-white: #e3e1e1;
+    --heading-font: "Inter Tight", sans-serif;
+    --fontawesome-family6: "Font Awesome 6 Free";
+    --btn-gradient: linear-gradient(90deg,var(--dark-red) 0%, var(--light-red) 100%);
+    --btn-hover-gradient: linear-gradient(90deg,var(--light-red) 0%, var(--dark-red) 100%);
 }
 h1, h2, h3, h4, h5, h6, p, a, li, i {
-    font-family: "Inter Tight", sans-serif;
+    font-family: var(--heading-font);
     transition: 0.4s all;
     font-weight: 400;
 }
@@ -54,20 +59,19 @@ figure {
 }
 .r-klan-btn a {
     display: inline-block;
-    background: var(--dark-red);
-    background: linear-gradient(90deg,var(--dark-red) 0%, var(--light-red) 100%);
+    background: var(--btn-gradient);
     padding: 20px 40px;
     color: var(--color-white);
     text-transform: uppercase;
     border-radius: 8px;
     font-weight: 700;
     &:hover {
-        background: linear-gradient(90deg,var(--light-red) 0%, var(--dark-red) 100%);
+        background: var(--btn-hover-gradient);
     }
 }
 .r-klan-btn a:after {
     content: "\f178";
-    font-family: "Font Awesome 6 Free";
+    font-family: var(--fontawesome-family6);
     font-weight: 900;
     padding-left: 8px;
 }
@@ -134,6 +138,33 @@ figure {
 .nav-toggle {
     display: none; 
 }
+/* Header Sticky */
+.r-klan-header {
+  width: 100%;
+  z-index: 999; /* Ensures it stays above other content */
+  transition: all 0.3s ease-in-out; 
+}
+
+/* The class added by JavaScript after 200px */
+.r-klan-header.is-sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #ffffff; /* Change this to match your site's design */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adds a nice drop shadow */
+  animation: slideDown 0.4s ease-in-out forwards;
+}
+
+/* Keyframes for the smooth slide-down effect */
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+/* Header Sticky */
 /* ------------------------------------------------- Header ------------------------------------------------- */
 
 /* ------------------------------------------------- Hero ------------------------------------------------- */
@@ -332,7 +363,7 @@ figure {
     flex-direction: column;
     row-gap: 20px;
     background-color: var(--color-white);
-    border: 1px solid #e3e1e1;
+    border: 1px solid var(--half-white);
     border-radius: 10px;
     position: relative;
     padding: 20px 40px;
@@ -359,32 +390,61 @@ figure {
     max-width: 110px;
 }
 /* ------------------------------------------------- Reviews ------------------------------------------------- */
-/* Base styles for your header */
-.r-klan-header {
-  width: 100%;
-  z-index: 999; /* Ensures it stays above other content */
-  transition: all 0.3s ease-in-out; 
-}
 
-/* The class added by JavaScript after 200px */
-.r-klan-header.is-sticky {
-  position: fixed;
-  top: 0;
-  left: 0;
-  background-color: #ffffff; /* Change this to match your site's design */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adds a nice drop shadow */
-  animation: slideDown 0.4s ease-in-out forwards;
+/* ------------------------------------------------- Get In Touch ------------------------------------------------- */
+.get-in-touch {
+    display: flex;
+    justify-content: center;
+    padding: 200px 15px 100px;
 }
+.get-in-touch .col {
+    width: 50%;
+}
+.get-in-touch .row {
+    display: flex;
+    column-gap: 50px;
+    align-items: center;
+}
+.get-in-touch h2 {
+    margin-bottom: 20px;
+}
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+.contact-form input, .contact-form textarea {
+    border: 1px solid var(--half-white);
+    font-family: var(--heading-font);
+    padding: 25px 15px;
+    border-radius: 6px;
+    outline: none;
+    box-shadow: 0px 20px 30px 0px rgba(0,0,0,0.1);
+}
+.contact-form textarea {
+    min-height: 150px;
+}
+.contact-form input::placeholder, .contact-form textarea::placeholder {
+    color: var(--color-black);
+    font-size: 16px;
+}
+.contact-form input:focus, .contact-form textarea:focus {
+    border: 1px solid var(--light-red);
+}
+.contact-form input[type="submit"] {
+    box-shadow: unset;
+    background: var(--btn-gradient);
+    color: var(--color-white);
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 700;
+    &:hover {
+        background: var(--btn-hover-gradient);
+    }
+}
+/* ------------------------------------------------- Get In Touch ------------------------------------------------- */
 
-/* Keyframes for the smooth slide-down effect */
-@keyframes slideDown {
-  from {
-    transform: translateY(-100%);
-  }
-  to {
-    transform: translateY(0);
-  }
-}
 /* ------------------------------------------------- Footer ------------------------------------------------- */
 .r-klan-footer {
     display: flex;
@@ -422,8 +482,8 @@ figure {
 }
 .r-klan-footer .footer-nav ul {
     row-gap: 15px;
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 .r-klan-footer .footer-nav ul li{
     list-style: none;
@@ -460,7 +520,7 @@ figure {
     font-weight: 700;
 }
 .footer-address:before, .footer-ph-no:before, .footer-email:before {
-    font-family: "Font Awesome 6 Free";
+    font-family: var(--fontawesome-family6);
     font-weight: 700;
 }
 .footer-address:before {
