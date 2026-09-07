@@ -96,6 +96,10 @@ class SiteFooter extends HTMLElement {
         </div>
       </div>
     </footer>
+    
+    <div id="loader-wrapper">
+     <div class="gradient-spinner"></div>
+    </div>
     `;
   }
 }

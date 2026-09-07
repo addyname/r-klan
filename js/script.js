@@ -185,3 +185,18 @@ sliderContainer.addEventListener("touchstart", dragStart, { passive: true });
 sliderContainer.addEventListener("touchend", dragEnd);
 
 // ------------------------------------------------- Hero Slider -------------------------------------------------
+
+// ------------------------------------------------- Loader -------------------------------------------------
+  // Wait for the entire page (including images and stylesheets) to load
+  window.addEventListener("load", function () {
+    const loader = document.getElementById("loader-wrapper");
+    
+    // Add the hidden class to trigger the CSS fade-out transition
+    loader.classList.add("loader-hidden");
+    
+    // Optional: Remove the loader from the DOM completely after the transition (0.5s)
+    setTimeout(() => {
+      loader.style.display = "none";
+    }, 500); 
+  });
+// ------------------------------------------------- Loader -------------------------------------------------

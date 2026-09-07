@@ -540,3 +540,49 @@ figure {
     content: "\f0e0";
 }
 /* ------------------------------------------------- Footer ------------------------------------------------- */
+
+/* ------------------------------------------------- Loader ------------------------------------------------- */
+/* Reset body to ensure no scrollbars during loading */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Loader Background */
+#loader-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #121212; /* Dark theme background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 0.5s ease, visibility 0.5s;
+}
+
+/* The Spinner */
+.gradient-spinner {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 5px solid transparent;
+  border-top-color: #00d2ff;
+  border-right-color: #3a7bd5;
+  animation: spin 1s linear infinite;
+}
+
+/* Animation */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Class to hide the loader via JavaScript */
+.loader-hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+/* ------------------------------------------------- Loader ------------------------------------------------- */
