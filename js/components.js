@@ -96,14 +96,10 @@ class SiteFooter extends HTMLElement {
         </div>
       </div>
     </footer>
-    
-    <div id="loader-wrapper">
-     <div class="gradient-spinner"></div>
-    </div>
     `;
   }
 }
 
 // Define the custom tags
-customElements.define('site-header', SiteHeader);
-customElements.define('site-footer', SiteFooter);
+customElements.define("site-header", SiteHeader);
+customElements.define("site-footer", SiteFooter);

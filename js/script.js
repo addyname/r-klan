@@ -1,19 +1,34 @@
+// ------------------------------------------------- Loader -------------------------------------------------
+// Wait for the entire page (including images and stylesheets) to load
+window.addEventListener("load", function () {
+  const loader = document.getElementById("loader-wrapper");
+
+  // Add the hidden class to trigger the CSS fade-out transition
+  loader.classList.add("loader-hidden");
+
+  // Optional: Remove the loader from the DOM completely after the transition (0.5s)
+  setTimeout(() => {
+    loader.style.display = "none";
+  }, 500);
+});
+// ------------------------------------------------- Loader -------------------------------------------------
+
 // ------------------------------------------------- Header Sticky -------------------------------------------------
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   const header = document.getElementById("rklanHeader");
 
-  window.addEventListener("scroll", function() {
+  window.addEventListener("scroll", function () {
     // Dynamically get the header's height
     const headerHeight = header.offsetHeight;
-    
+
     if (window.scrollY > 200) {
       header.classList.add("is-sticky");
       // Add padding to the body to replace the missing header space
-      document.body.style.paddingTop = headerHeight + 'px';
+      document.body.style.paddingTop = headerHeight + "px";
     } else {
       header.classList.remove("is-sticky");
       // Remove the padding when returning to the top
-      document.body.style.paddingTop = '0';
+      document.body.style.paddingTop = "0";
     }
   });
 });
@@ -24,14 +39,14 @@ const navToggle = document.getElementById("navToggle");
 const mobileNav = document.getElementById("mobileNav");
 const toggleIcon = navToggle.querySelector("i");
 
-navToggle.addEventListener('click', () => {
-    const isOpen = mobileNav.classList.toggle('active');
-    
-    if (isOpen) {
-        toggleIcon.classList.replace('fa-bars', 'fa-xmark');
-    } else {
-        toggleIcon.classList.replace('fa-xmark', 'fa-bars');
-    }
+navToggle.addEventListener("click", () => {
+  const isOpen = mobileNav.classList.toggle("active");
+
+  if (isOpen) {
+    toggleIcon.classList.replace("fa-bars", "fa-xmark");
+  } else {
+    toggleIcon.classList.replace("fa-xmark", "fa-bars");
+  }
 });
 
 // Method 2
@@ -50,11 +65,13 @@ navToggle.addEventListener('click', () => {
 // ------------------------------------------------- Mobile Toggle -------------------------------------------------
 
 // ------------------------------------------------- Active Link -------------------------------------------------
-const activeLink = document.querySelectorAll('.r-klan-header .header-nav ul li a')
+const activeLink = document.querySelectorAll(
+  ".r-klan-header .header-nav ul li a",
+);
 
-  activeLink.forEach(link => {
-    if (link.href === window.location.href) link.classList.add('active');
-}); 
+activeLink.forEach((link) => {
+  if (link.href === window.location.href) link.classList.add("active");
+});
 // ------------------------------------------------- Active Link -------------------------------------------------
 
 // ------------------------------------------------- Hero Slider -------------------------------------------------
@@ -185,18 +202,3 @@ sliderContainer.addEventListener("touchstart", dragStart, { passive: true });
 sliderContainer.addEventListener("touchend", dragEnd);
 
 // ------------------------------------------------- Hero Slider -------------------------------------------------
-
-// ------------------------------------------------- Loader -------------------------------------------------
-  // Wait for the entire page (including images and stylesheets) to load
-  window.addEventListener("load", function () {
-    const loader = document.getElementById("loader-wrapper");
-    
-    // Add the hidden class to trigger the CSS fade-out transition
-    loader.classList.add("loader-hidden");
-    
-    // Optional: Remove the loader from the DOM completely after the transition (0.5s)
-    setTimeout(() => {
-      loader.style.display = "none";
-    }, 500); 
-  });
-// ------------------------------------------------- Loader -------------------------------------------------

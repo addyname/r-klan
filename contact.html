@@ -18,6 +18,9 @@
 
   <body>
     <!------------------------------------------------- Header ------------------------------------------------->
+    <div id="loader-wrapper">
+      <div class="gradient-spinner"></div>
+    </div>
     <site-header></site-header>
     <!------------------------------------------------- Header ------------------------------------------------->
 
@@ -46,10 +49,24 @@
           <div class="col content">
             <h2><b>Get In Touch</b></h2>
             <form class="contact-form" action="#" method="get">
-              <input type="text" name="name" id="fullName" placeholder="Name">
-              <input type="email" name="email" id="emailAddress" placeholder="Email">
-              <input type="tel" name="phone" id="phoneNumber" placeholder="Phone">
-              <textarea name="message" id="formMessage" placeholder="Message"></textarea>
+              <input type="text" name="name" id="fullName" placeholder="Name" />
+              <input
+                type="email"
+                name="email"
+                id="emailAddress"
+                placeholder="Email"
+              />
+              <input
+                type="tel"
+                name="phone"
+                id="phoneNumber"
+                placeholder="Phone"
+              />
+              <textarea
+                name="message"
+                id="formMessage"
+                placeholder="Message"
+              ></textarea>
               <button type="submit" class="submit-btn">
                 SUBMIT <i class="fa-solid fa-arrow-right-long"></i>
               </button>

@@ -1,59 +1,75 @@
 <!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>R-Klan</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>R-Klan</title>
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/responsive.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+    <script src="js/components.js" defer></script>
+    <script src="js/script.js" defer></script>
+    <!-- If you prefer to keep your script links in the <head>, add the word defer. This tells the browser to wait until the HTML is fully loaded before running the script. -->
+  </head>
 
-  <script src="js/components.js" defer></script>
-  <script src="js/script.js" defer></script>
-  <!-- If you prefer to keep your script links in the <head>, add the word defer. This tells the browser to wait until the HTML is fully loaded before running the script. -->
-</head>
-
-<body>
-
-  <!------------------------------------------------- Header ------------------------------------------------->
-  <site-header></site-header>
-  <!------------------------------------------------- Header ------------------------------------------------->
-
-  <!------------------------------------------------- Banner ------------------------------------------------->
-  <section id="innerPageBanner" class="inner-page-banner">
-    <div class="container">
-      <div class="row">
-        <h1><b>About Us</b></h1>
-      </div>
-      <div class="row">
-        <figure class="banner-img">
-          <img src="images/about-banner-bg.jpg" alt="About Banner">
-        </figure>
-      </div>
+  <body>
+    <!------------------------------------------------- Header ------------------------------------------------->
+    <div id="loader-wrapper">
+      <div class="gradient-spinner"></div>
     </div>
-  </section>
-  <!------------------------------------------------- Banner ------------------------------------------------->
+    <site-header></site-header>
+    <!------------------------------------------------- Header ------------------------------------------------->
 
-  <!------------------------------------------------- About Intro ------------------------------------------------->
-  <section id="aboutIntro" class="about-intro">
-    <div class="container">
-      <div class="row">
-        <div class="col img">
-          <img src="images/airplane-img.jpg" alt="flight">
+    <!------------------------------------------------- Banner ------------------------------------------------->
+    <section id="innerPageBanner" class="inner-page-banner">
+      <div class="container">
+        <div class="row">
+          <h1><b>About Us</b></h1>
         </div>
-        <div class="col content">
-          <p>On July 8, 2015, our minority family's lives were drastically and permanently changed by nine racist words. "Your family has no rights; planes have no rules." They were spoken proudly by the airport manager, Meadow Chase, who was responsible for the management of Ramona Airport.</p>
-          <p>Meadow Chase was already fully aware of the impact her words would have and had the backing of local public servants and co-conspirators. Unwittingly, we found ourselves in a vicious, hopeless, helpless landscape of fear and violence, unable to use our property for its intended purpose or live in peace, as we had done for the past fifteen years.</p>
+        <div class="row">
+          <figure class="banner-img">
+            <img src="images/about-banner-bg.jpg" alt="About Banner" />
+          </figure>
         </div>
       </div>
-    </div>
-  </section>
-  <!------------------------------------------------- About Intro ------------------------------------------------->
+    </section>
+    <!------------------------------------------------- Banner ------------------------------------------------->
 
-  <!------------------------------------------------- Footer ------------------------------------------------->
+    <!------------------------------------------------- About Intro ------------------------------------------------->
+    <section id="aboutIntro" class="about-intro">
+      <div class="container">
+        <div class="row">
+          <div class="col img">
+            <img src="images/airplane-img.jpg" alt="flight" />
+          </div>
+          <div class="col content">
+            <p>
+              On July 8, 2015, our minority family's lives were drastically and
+              permanently changed by nine racist words. "Your family has no
+              rights; planes have no rules." They were spoken proudly by the
+              airport manager, Meadow Chase, who was responsible for the
+              management of Ramona Airport.
+            </p>
+            <p>
+              Meadow Chase was already fully aware of the impact her words would
+              have and had the backing of local public servants and
+              co-conspirators. Unwittingly, we found ourselves in a vicious,
+              hopeless, helpless landscape of fear and violence, unable to use
+              our property for its intended purpose or live in peace, as we had
+              done for the past fifteen years.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!------------------------------------------------- About Intro ------------------------------------------------->
+
+    <!------------------------------------------------- Footer ------------------------------------------------->
     <site-footer></site-footer>
     <!------------------------------------------------- Footer ------------------------------------------------->
-</body>
-
+  </body>
 </html>
