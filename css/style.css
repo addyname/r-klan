@@ -11,6 +11,7 @@
     --color-white: #ffffff;
     --color-black: #000000;
     --dark-blue: #142749;
+    --light-grey: #b0b0b0;
 }
 h1, h2, h3, h4, h5, h6, p, a, li, i {
     font-family: "Inter Tight", sans-serif;
@@ -225,7 +226,7 @@ figure {
     cursor: pointer;
     height: 14px;
     width: 14px;
-    background-color: #b0b0b0; 
+    background-color: var(--light-grey); 
     border-radius: 50%;
     display: inline-block;
     transition: background-color 0.3s ease;
@@ -255,9 +256,7 @@ figure {
         transform: translateX(0); 
     }
 }
-/* ------------------------------------------------- Hero ------------------------------------------------- */
-
-/* ------------------------------------------------- About ------------------------------------------------- */
+/* About */
 .about-plight {
     display: flex;
     justify-content: center;
@@ -287,9 +286,10 @@ figure {
     row-gap: 30px;
     justify-content: center;
 }
-/* ------------------------------------------------- About ------------------------------------------------- */
+/* About */
+/* ------------------------------------------------- Home ------------------------------------------------- */
 
-/* ------------------------------------------------- About Intro ------------------------------------------------- */
+/* ------------------------------------------------- About Us ------------------------------------------------- */
 .about-intro {
     display: flex;
     justify-content: center;
@@ -314,7 +314,51 @@ figure {
     flex-direction: column;
     row-gap: 30px;
 }
-/* ------------------------------------------------- About Intro ------------------------------------------------- */
+/* ------------------------------------------------- About Us ------------------------------------------------- */
+
+/* ------------------------------------------------- Reviews ------------------------------------------------- */
+.site-reviews {
+    display: flex;
+    justify-content: center;
+    padding: 200px 15px 100px;
+}
+.site-reviews .container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+}
+.site-reviews .review {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    background-color: var(--color-white);
+    border: 1px solid #e3e1e1;
+    border-radius: 10px;
+    position: relative;
+    padding: 20px 40px;
+    box-shadow: 0px 20px 30px 0px rgba(0,0,0,0.1);
+}
+.site-reviews h4 {
+    font-weight: 600;
+    font-size: 20px;
+}
+.site-reviews p {
+    font-style: italic;
+}
+.site-reviews .google-icon img {
+    max-width: 30px;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+}
+.site-reviews .review-profile img {
+    margin-bottom: 20px;
+    filter: drop-shadow(0px 30px 30px rgba(0, 0, 0,0.2));
+}
+.site-reviews .review-profile img, .site-reviews .review-stars img {
+    max-width: 110px;
+}
+/* ------------------------------------------------- Reviews ------------------------------------------------- */
 
 /* ------------------------------------------------- Footer ------------------------------------------------- */
 .r-klan-footer {

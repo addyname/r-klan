@@ -16,10 +16,8 @@ class SiteHeader extends HTMLElement {
                   <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About Our Cause</a></li>
-                    <li><a href="#">Buy Book</a></li>
-                    <li><a href="#">Shop</a></li>
-                    <li><a href="#">Reviews</a></li>
-                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="reviews.html">Reviews</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
                   </ul>
                 </nav>
                 <div class="header-sm-icons">
@@ -40,10 +38,8 @@ class SiteHeader extends HTMLElement {
                   <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About Our Cause</a></li>
-                    <li><a href="#">Buy Book</a></li>
-                    <li><a href="#">Shop</a></li>
-                    <li><a href="#">Reviews</a></li>
-                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="reviews.html">Reviews</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
                   </ul>
                 </nav>
                 <div class="header-sm-icons">
@@ -84,10 +80,8 @@ class SiteFooter extends HTMLElement {
               <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About Our Cause</a></li>
-                <li><a href="#">Buy Book</a></li>
-                <li><a href="#">Shop</a></li>
-                <li><a href="#">Reviews</a></li>
-                <li><a href="#">Contact Us</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
               </ul>
             </nav>
           </div>
