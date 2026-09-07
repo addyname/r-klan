@@ -408,12 +408,19 @@ figure {
 .get-in-touch h2 {
     margin-bottom: 20px;
 }
+.get-in-touch .img img{
+    height: auto;
+    min-height: 600px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 20px;
+}
 .contact-form {
     display: flex;
     flex-direction: column;
     row-gap: 20px;
 }
-.contact-form input, .contact-form textarea {
+.contact-form input, .contact-form textarea, .contact-form .submit-btn {
     border: 1px solid var(--half-white);
     font-family: var(--heading-font);
     padding: 25px 15px;
@@ -431,7 +438,7 @@ figure {
 .contact-form input:focus, .contact-form textarea:focus {
     border: 1px solid var(--light-red);
 }
-.contact-form input[type="submit"] {
+.contact-form .submit-btn {
     box-shadow: unset;
     background: var(--btn-gradient);
     color: var(--color-white);
