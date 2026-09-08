@@ -6,7 +6,7 @@ class SiteHeader extends HTMLElement {
           <div class="row">
             <div class="logo-col">
               <figure class="r-klan-logo">
-                <a href="index.html"><img src="images/r-klan-logo.png" alt="R-Klan Logo" /></a>
+                <a href="index.html"><img src="images/demo-logo.png" alt="R-Klan Logo" /></a>
               </figure>
             </div>
 
@@ -66,7 +66,7 @@ class SiteFooter extends HTMLElement {
           <div class="col">
             <figure class="footer-logo">
               <a href="index.html"
-                ><img src="images/r-klan-footer-logo.png" alt="R-Klan Logo"
+                ><img src="images/demo-logo-white.png" alt="R-Klan Logo"
               /></a>
             </figure>
             <div class="footer-sm-icons">
@@ -88,7 +88,7 @@ class SiteFooter extends HTMLElement {
           <div class="col">
             <p><a class="footer-address" href="https://www.google.com/maps" target="_blank">Address will come here,<br>Address will come here,</a></p>
             <p><a class="footer-ph-no" href="tel:123-456-7890" target="_blank">(123) 456-7890</a></p>
-            <p><a class="footer-email" href="mailto:info@r-klan.com" target="_blank">info@r-klan.com</a></p>
+            <p><a class="footer-email" href="mailto:info@gmail.com" target="_blank">info@gmail.com</a></p>
           </div>
         </div>
         <div class="row">

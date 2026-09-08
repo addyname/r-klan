@@ -107,6 +107,12 @@ figure {
 .r-klan-header .row .logo-col {
   width: 20%;
 }
+.r-klan-header .logo-col .r-klan-logo img {
+    max-width: 140px;
+}
+.r-klan-header.is-sticky .r-klan-logo img {
+  max-width: 110px;
+}
 .r-klan-header .row .desktop-nav {
   width: 80%;
 }
@@ -494,7 +500,7 @@ figure {
   padding: 100px 15px 35px;
 }
 .r-klan-footer .footer-logo img {
-  max-width: 300px;
+  max-width: 180px;
 }
 .r-klan-footer a {
   color: var(--color-white);
