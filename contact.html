@@ -49,7 +49,13 @@
           <div class="col content">
             <h2><b>Get In Touch</b></h2>
             <form class="contact-form" action="#" method="get">
-              <input type="text" name="name" id="fullName" placeholder="Name" required />
+              <input
+                type="text"
+                name="name"
+                id="fullName"
+                placeholder="Name"
+                required
+              />
               <input
                 type="email"
                 name="email"
@@ -62,8 +68,13 @@
                 name="phone"
                 id="phoneNumber"
                 placeholder="Phone"
+                pattern="[0-9]{10}"
+                maxlength="10"
+                title="Please enter 10 digits number"
+                oninput="this.value = this.value.replace(/[^0-9]/g, '')"
                 required
-              />
+              /> 
+              <!-- oninput="this.value = this.value.replace(/[^0-9]/g, '')": This tells the browser, "Every time the user types a character, check if it is a number from 0-9. If it is not a number (like the letter 'd'), replace it with nothing immediately." -->
               <textarea
                 name="message"
                 id="formMessage"
