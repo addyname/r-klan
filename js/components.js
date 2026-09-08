@@ -92,7 +92,7 @@ class SiteFooter extends HTMLElement {
           </div>
         </div>
         <div class="row">
-          <p class="footer-copyright">© 2026 R-Klan. All Rights Reserved.</p>
+          <p class="footer-copyright">© 2026 Web Design Ad. All Rights Reserved.</p>
         </div>
       </div>
     </footer>
