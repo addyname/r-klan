@@ -48,6 +48,11 @@ h2 {
   font-size: 50px;
   line-height: 1.2em;
 }
+h4 {
+  font-size: 20px;
+  line-height: 1.2em;
+  font-weight: 600;
+}
 p {
   font-size: 18px;
   line-height: 1.6em;
@@ -108,7 +113,7 @@ figure {
   width: 20%;
 }
 .r-klan-header .logo-col .r-klan-logo img {
-    max-width: 140px;
+  max-width: 140px;
 }
 .r-klan-header.is-sticky .r-klan-logo img {
   max-width: 110px;
@@ -353,6 +358,176 @@ figure {
   justify-content: center;
 }
 /* About */
+
+/* Testimonial */
+.home-testimonial {
+  display: flex;
+  justify-content: center;
+  padding: 100px 15px;
+  background-image: url("../images/home-testimonial-bg.jpg");
+  background-size: cover;
+  background-position: top center;
+}
+.home-testimonial .container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+}
+.home-testimonial .row {
+  display: flex;
+  justify-content: center;
+  column-gap: 20px;
+}
+.home-testimonial .col {
+  position: relative;
+  background-color: var(--color-white);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 20px;
+}
+.home-testimonial .col p {
+  font-style: italic;
+}
+.home-testimonial .google-icon img {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  max-width: 40px;
+}
+.home-testimonial .review-profile img {
+  margin-top: -70px;
+  margin-bottom: 10px;
+  max-width: 100px;
+  filter: drop-shadow(0px 30px 30px rgba(0, 0, 0, 0.2));
+}
+.home-testimonial .review-stars img {
+  max-width: 100px;
+}
+/* Testimonial Slider Css */
+/* 1. Master Container (Holds arrows and provides side spacing) */
+.slider-container {
+  position: relative;
+  width: 100%;
+  padding: 0 60px; /* 60px space strictly for arrows */
+  box-sizing: border-box;
+}
+
+/* 2. Viewport (Clips left/right perfectly, keeps vertical space for images) */
+.slider-viewport {
+  overflow: hidden;
+  width: 100%;
+  padding: 80px 0 40px; /* Top padding protects the -70px profile images */
+}
+
+/* 3. Track Setup */
+.slider-track {
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  justify-content: flex-start !important;
+  align-items: stretch;
+  margin: 0 !important;
+  width: 100%;
+  gap: 30px !important; /* CRITICAL: Enforces exact gap for JS math */
+  cursor: grab;
+  user-select: none;
+}
+
+.slider-track:active {
+  cursor: grabbing;
+}
+
+/* 4. Column Sizing (Math perfectly aligns 100% of viewport) */
+.slider-track .col {
+  margin: 0 !important; /* Overrides original margins */
+  flex: 0 0 100% !important; /* Mobile: 1 Column */
+  flex-shrink: 0; 
+  box-sizing: border-box;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+@media (min-width: 768px) {
+  /* Tablet: 2 Columns */
+  .slider-track .col { flex: 0 0 calc((100% - 30px) / 2) !important; } 
+}
+
+@media (min-width: 1024px) {
+  /* Desktop: 3 Columns */
+  .slider-track .col { flex: 0 0 calc((100% - 60px) / 3) !important; } 
+}
+
+/* 5. Active Middle Slide Styling */
+/* By default (Mobile & Tablet), keep it flat and normal size */
+.slider-track .col.active-slide {
+  box-shadow: none;
+  transform: scale(1);
+  z-index: 1;
+}
+/* ONLY on Desktop (1024px and up), apply the shadow and zoom effect */
+@media (min-width: 1024px) {
+  .slider-track .col.active-slide {
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.08);
+    transform: scale(1.05);
+    z-index: 2;
+  }
+}
+/* 6. Navigation Buttons */
+.slider-nav {
+  position: absolute;
+  top: 55%; /* Centers arrows visually alongside the cards */
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  pointer-events: none;
+  z-index: 10;
+  padding: 0 10px; /* Places arrows neatly inside the container's 60px gap */
+  box-sizing: border-box;
+}
+
+.slider-nav button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #f5f5f5;
+  border: none;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  pointer-events: auto;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider-nav button.next-btn {
+  background-color: #8a0000;
+  color: #fff;
+}
+
+/* 7. Mobile Adjustments (Max-width 480px) */
+@media (max-width: 480px) {
+  .slider-container {
+    padding: 0 15px; /* Gives the card much more width */
+  }
+  
+  .slider-nav {
+    padding: 0 5px; /* Pushes arrows closer to the screen edges */
+  }
+  
+  .slider-nav button {
+    width: 32px; /* Shrinks arrows slightly so they don't cover text */
+    height: 32px;
+    font-size: 14px;
+  }
+}
+/* Testimonial Slider Css */
+/* Testimonial */
 /* ------------------------------------------------- Home ------------------------------------------------- */
 
 /* ------------------------------------------------- About Us ------------------------------------------------- */
@@ -403,10 +578,6 @@ figure {
   position: relative;
   padding: 20px 40px;
   box-shadow: 0px 20px 30px 0px rgba(0, 0, 0, 0.1);
-}
-.site-reviews h4 {
-  font-weight: 600;
-  font-size: 20px;
 }
 .site-reviews p {
   font-style: italic;

@@ -202,3 +202,160 @@ sliderContainer.addEventListener("touchstart", dragStart, { passive: true });
 sliderContainer.addEventListener("touchend", dragEnd);
 
 // ------------------------------------------------- Hero Slider -------------------------------------------------
+
+// ------------------------------------------------- Testimonial Slider -------------------------------------------------
+document.addEventListener('DOMContentLoaded', () => {
+  const track = document.querySelectorAll('.home-testimonial .row')[1];
+  if (!track) return;
+  
+  const originalSlides = Array.from(track.querySelectorAll('.col'));
+  const numOriginals = originalSlides.length;
+  if (numOriginals === 0) return;
+
+  // 1. Structure Initialization (Container > Viewport > Track)
+  track.classList.add('slider-track');
+  
+  const container = document.createElement('div');
+  container.className = 'slider-container';
+  track.parentNode.insertBefore(container, track);
+
+  const viewport = document.createElement('div');
+  viewport.className = 'slider-viewport';
+  
+  // Nesting elements
+  container.appendChild(viewport);
+  viewport.appendChild(track);
+
+  const nav = document.createElement('div');
+  nav.className = 'slider-nav';
+  nav.innerHTML = '<button class="prev-btn">&#10094;</button><button class="next-btn">&#10095;</button>';
+  container.appendChild(nav);
+
+  // 2. Clone Nodes for Seamless Infinite Loop
+  originalSlides.forEach(slide => {
+    track.insertBefore(slide.cloneNode(true), track.firstChild);
+  });
+  originalSlides.forEach(slide => {
+    track.appendChild(slide.cloneNode(true));
+  });
+
+  const allSlides = Array.from(track.querySelectorAll('.col'));
+
+  // 3. Variables
+  let currentIndex = numOriginals; // Start at the first real slide
+  let isAnimating = false;
+  let isDragging = false;
+  let startPos = 0, currentTranslate = 0, prevTranslate = 0;
+  let autoPlayInterval;
+
+  // 4. Core Logic
+  function getActiveOffset() {
+    return window.innerWidth >= 1024 ? 1 : 0; 
+  }
+
+  function getSlideWidth() {
+    // Width of element + 30px (which strictly matches the CSS gap)
+    return allSlides[0].offsetWidth + 30; 
+  }
+
+  function updateSliderPosition(animate = true) {
+    const slideWidth = getSlideWidth();
+    currentTranslate = -(currentIndex * slideWidth);
+    prevTranslate = currentTranslate;
+
+    track.style.transition = animate ? 'transform 0.4s ease-in-out' : 'none';
+    isAnimating = animate;
+    track.style.transform = `translateX(${currentTranslate}px)`;
+
+    // Apply Active class
+    allSlides.forEach(s => s.classList.remove('active-slide'));
+    const activeTarget = currentIndex + getActiveOffset();
+    if (allSlides[activeTarget]) allSlides[activeTarget].classList.add('active-slide');
+  }
+
+  // Seamless jump without animation at boundaries
+  track.addEventListener('transitionend', () => {
+    isAnimating = false;
+    if (currentIndex < numOriginals) {
+      currentIndex += numOriginals;
+      updateSliderPosition(false);
+    } else if (currentIndex >= numOriginals * 2) {
+      currentIndex -= numOriginals;
+      updateSliderPosition(false);
+    }
+  });
+
+  // 5. Controls
+  function moveNext() {
+    if (isAnimating) return;
+    currentIndex++;
+    updateSliderPosition(true);
+    resetAutoPlay();
+  }
+
+  function movePrev() {
+    if (isAnimating) return;
+    currentIndex--;
+    updateSliderPosition(true);
+    resetAutoPlay();
+  }
+
+  nav.querySelector('.next-btn').addEventListener('click', moveNext);
+  nav.querySelector('.prev-btn').addEventListener('click', movePrev);
+
+  // 6. Drag & Touch Logic
+  function getPositionX(e) { return e.type.includes('mouse') ? e.pageX : e.touches[0].clientX; }
+
+  function touchStart(e) {
+    if (isAnimating) return;
+    isDragging = true;
+    startPos = getPositionX(e);
+    clearInterval(autoPlayInterval);
+    track.style.transition = 'none';
+  }
+
+  function touchMove(e) {
+    if (!isDragging) return;
+    currentTranslate = prevTranslate + getPositionX(e) - startPos;
+    track.style.transform = `translateX(${currentTranslate}px)`;
+  }
+
+  function touchEnd() {
+    if (!isDragging) return;
+    isDragging = false;
+    const movedBy = currentTranslate - prevTranslate;
+    
+    if (movedBy < -50) currentIndex++;
+    else if (movedBy > 50) currentIndex--;
+
+    updateSliderPosition(true);
+    startAutoPlay();
+  }
+
+  track.addEventListener('mousedown', touchStart);
+  track.addEventListener('mousemove', touchMove);
+  track.addEventListener('mouseup', touchEnd);
+  track.addEventListener('mouseleave', touchEnd);
+  track.addEventListener('touchstart', touchStart, { passive: true });
+  track.addEventListener('touchmove', touchMove, { passive: true });
+  track.addEventListener('touchend', touchEnd);
+
+  // 7. Autoplay & Resize Reset
+  function startAutoPlay() { autoPlayInterval = setInterval(moveNext, 3000); }
+  function resetAutoPlay() { clearInterval(autoPlayInterval); startAutoPlay(); }
+
+  let resizeTimeout;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(() => {
+      track.style.transition = 'none';
+      updateSliderPosition(false);
+    }, 100);
+  });
+
+  setTimeout(() => {
+    updateSliderPosition(false);
+    startAutoPlay();
+  }, 100);
+});
+// ------------------------------------------------- Testimonial Slider -------------------------------------------------
